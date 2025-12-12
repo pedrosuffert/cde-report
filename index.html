@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto-Native AI Agent</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --bg-secondary: #161b22;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #f7931a;
+            --accent-secondary: #58a6ff;
+            --border: #30363d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .highlight {
+            color: var(--accent);
+        }
+        
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        
+        .feature h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .architecture {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .tech {
+            background: var(--bg-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+        }
+        
+        .cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+        }
+        
+        .btn-primary:hover {
+            background: #ffa940;
+        }
+        
+        .btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--accent);
+        }
+        
+        .demo {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border: 1px solid var(--border);
+        }
+        
+        .demo-line {
+            margin: 0.5rem 0;
+            font-family: monospace;
+        }
+        
+        .demo-user {
+            color: var(--accent-secondary);
+        }
+        
+        .demo-agent {
+            color: #7ee787;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .emoji { font-size: 3rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="emoji">⚡🤖</span>
+            <h1>Crypto-Native AI Agent</h1>
+            <p class="tagline">
+                An AI agent that <span class="highlight">holds its own Bitcoin</span> — making cryptocurrency accessible through natural conversation
+            </p>
+            <div class="cta">
+                <a href="https://github.com/mit-dci/cde-2025/blob/main/project-ideas.md" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    View on GitHub
+                </a>
+                <a href="#demo" class="btn btn-secondary">See How It Works</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>🧠 What is this?</h2>
+            <p>
+                This project implements an AI agent that genuinely holds and manages Bitcoin. Unlike traditional 
+                AI assistants that can only <em>talk about</em> money, this agent:
+            </p>
+            <div class="features">
+                <div class="feature">
+                    <h3>🔐 Self-Custody</h3>
+                    <p>Holds its own private keys using BIP32/BIP39 standard key derivation</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Lightning Fast</h3>
+                    <p>Instant deposits and payments via Lightning Network</p>
+                </div>
+                <div class="feature">
+                    <h3>🕵️ Privacy First</h3>
+                    <p>Cashu blind signatures make transactions unlinkable</p>
+                </div>
+                <div class="feature">
+                    <h3>💬 Natural Language</h3>
+                    <p>Interact through conversation—no commands to memorize</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🌍 Bitcoin for Everyone</h2>
+            <p>
+                Traditional Bitcoin wallets require users to learn complex concepts: invoices, channels, fees, mnemonics. 
+                This creates a barrier that keeps mainstream users away from the ecosystem.
+            </p>
+            <p>
+                <strong>Chatbots are already familiar.</strong> Billions of people use messaging apps and AI assistants daily. 
+                By wrapping Bitcoin functionality in a conversational interface, we remove the learning curve entirely.
+            </p>
+            <div class="features">
+                <div class="feature">
+                    <h3>🎯 No Technical Knowledge Required</h3>
+                    <p>Say "deposit 100 sats" instead of navigating complex wallet UIs</p>
+                </div>
+                <div class="feature">
+                    <h3>🛡️ Guided & Safe</h3>
+                    <p>The agent confirms actions, explains what's happening, and prevents mistakes</p>
+                </div>
+                <div class="feature">
+                    <h3>🚀 Gateway to Bitcoin</h3>
+                    <p>Users learn by doing—in a low-stakes, familiar environment</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo">
+            <h2>💬 How it Works</h2>
+            <div class="demo">
+                <p class="demo-line demo-user">User: "Deposit 100 sats"</p>
+                <p class="demo-line demo-agent">Agent: ✅ Invoice for 100 sats generated! Scan the QR code to deposit.</p>
+                <p class="demo-line demo-user">User: "I paid"</p>
+                <p class="demo-line demo-agent">Agent: ✅ Deposit confirmed! Received 100 sats. New balance: 100 sats.</p>
+                <p class="demo-line demo-user">User: "Pay this invoice: lnbc500n1..."</p>
+                <p class="demo-line demo-agent">Agent: ⚠️ Confirm payment of 50 sats? Reply 'yes' to confirm.</p>
+                <p class="demo-line demo-user">User: "yes"</p>
+                <p class="demo-line demo-agent">Agent: ✅ Payment of 50 sats completed. New balance: 50 sats.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>🏗️ Architecture</h2>
+            <pre class="architecture">
+├── main.py                 # Streamlit app entry point
+├── config.py               # Environment settings
+└── src/
+    ├── models/
+    │   └── wallet.py       # Data models (Pydantic)
+    ├── services/
+    │   ├── cashu_service.py    # Cashu wallet operations
+    │   └── llm_service.py      # LLM API wrapper
+    ├── agent/
+    │   ├── core.py         # Conversation loop
+    │   └── tools.py        # Tool definitions
+    └── ui/
+        ├── state.py        # Session state
+        └── components.py   # UI rendering</pre>
+        </section>
+
+        <section>
+            <h2>🛠️ Tech Stack</h2>
+            <div class="tech-stack">
+                <span class="tech">Python</span>
+                <span class="tech">Streamlit</span>
+                <span class="tech">Groq (Llama 3.3)</span>
+                <span class="tech">Cashu Protocol</span>
+                <span class="tech">Lightning Network</span>
+                <span class="tech">BIP32/BIP39</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>🚀 Quick Start</h2>
+            <h3>1. Clone and install</h3>
+            <pre class="architecture">git clone git+ssh://git@github.com/Prof-Edil/project-proposals-unbeast.git
+cd crypto-native-ai-agent
+poetry install</pre>
+            
+            <h3>2. Configure</h3>
+            <pre class="architecture">cp .env.example .env
+# Edit .env with your GROQ_API_KEY and MINT_URL</pre>
+            
+            <h3>3. Run</h3>
+            <pre class="architecture">poetry run streamlit run main.py</pre>
+        </section>
+
+        <section>
+            <h2>📚 Learn More</h2>
+            <p>
+                <strong>Cashu Protocol:</strong> <a href="https://cashu.space" style="color: var(--accent)">cashu.space</a> — Chaumian e-cash for Bitcoin<br>
+                <strong>Lightning Network:</strong> <a href="https://lightning.network" style="color: var(--accent)">lightning.network</a> — Instant Bitcoin payments<br>
+                <strong>Groq:</strong> <a href="https://groq.com" style="color: var(--accent)">groq.com</a> — Fast LLM inference
+            </p>
+        </section>
+
+        <footer>
+            <p>
+                Built with ⚡ for the Bitcoin ecosystem<br>
+                <a href="https://github.com/YOUR_USERNAME/crypto-native-ai-agent">GitHub</a> · 
+                MIT License
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
